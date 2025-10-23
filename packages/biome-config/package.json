@@ -12,6 +12,6 @@
 		"access": "public"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.2.7"
+		"@biomejs/biome": "^2.0.6"
 	}
 }

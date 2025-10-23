@@ -1,0 +1,5 @@
+#!/bin/sh
+echo "pre-commit hook run"
+
+pnpm run lint
+pnpm run format

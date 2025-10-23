@@ -1,0 +1,25 @@
+{
+	"name": "nuxt-turborepo",
+	"private": true,
+	"scripts": {
+		"build": "turbo build",
+		"dev": "turbo dev",
+		"lint": "turbo lint",
+		"format": "turbo format",
+		"prepare": "git config core.hooksPath .hooks",
+		"shadcn:add": "pnpm --filter @repo/ui shadcn:add-component"
+	},
+	"devDependencies": {
+		"@repo/biome-config": "workspace:*",
+		"@repo/typescript-config": "workspace:*",
+		"lint-staged": "^16.1.2",
+		"turbo": "^2.5.5"
+	},
+	"packageManager": "pnpm@9.15.4",
+	"lint-staged": {
+		"*.{js,ts,vue}": [
+			"pnpm run lint",
+			"pnpm run format"
+		]	
+	}
+}

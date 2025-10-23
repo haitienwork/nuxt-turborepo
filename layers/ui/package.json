@@ -7,7 +7,7 @@
     "shadcn:init": "pnpx shadcn-vue@latest init",
     "shadcn:add-component": "pnpx shadcn-vue@latest add",
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev -p 3001",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"

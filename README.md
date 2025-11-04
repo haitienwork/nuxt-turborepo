@@ -10,7 +10,7 @@ A modern monorepo built with Nuxt 4, Turborepo, and pnpm workspaces.
 - 🔐 **Authentication** - OAuth (Discord) and credential auth
 - 🎭 **UI Components** - Pre-built components with shadcn-vue
 - 🛠️ **Utilities** - Reusable utils and composables
-- 📝 **Biome** - Fast linting and formatting
+- 📝 **Biome** - Fast linting and formatting (with [Ultracite](https://www.ultracite.ai/) config)
 - 🔄 **TypeScript** - Type-safe across the entire project
 
 ## Project Structure
@@ -78,15 +78,18 @@ Main application that extends all layers.
 Authentication with OAuth and credential login.
 
 **API Routes:**
+
 - `POST /api/auth/credential` - Login
 - `POST /api/auth/logout` - Logout
 - `GET /api/auth/oauth/discord` - Discord OAuth
 - `GET /api/me` - Get current user
 
 ### UI Layer
+
 Reusable UI components built with shadcn-vue and Radix Vue.
 
 ### Utils Layer
+
 Shared utilities and composables.
 
 ## Environment Variables
@@ -115,7 +118,6 @@ Turborepo will cache builds and only rebuild what changed.
 - **Build:** Turborepo (v2.5.5), pnpm (v9.15.4)
 - **Styling:** Tailwind CSS v4
 - **UI:** shadcn-vue, Radix Vue, Lucide Icons
-- **Forms:** vee-validate, Zod
 - **Auth:** nuxt-auth-utils
 - **Code Quality:** Biome, TypeScript
 
@@ -125,3 +127,4 @@ Turborepo will cache builds and only rebuild what changed.
 - [Turborepo](https://turbo.build/repo/docs)
 - [Tailwind CSS](https://tailwindcss.com/docs)
 - [shadcn-vue](https://www.shadcn-vue.com/)
+- [Ultracite](https://www.ultracite.ai/)

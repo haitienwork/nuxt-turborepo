@@ -1,0 +1,16 @@
+@theme inline {
+	--animate-discord-rotate: discord-rotate 2s infinite
+		cubic-bezier(0.2, 0, 0.2, 1);
+
+	/* Keyframes */
+	@keyframes discord-rotate {
+		0%,
+		20% {
+			transform: rotate(0);
+		}
+		80%,
+		100% {
+			transform: rotate(720deg);
+		}
+	}
+}

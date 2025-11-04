@@ -1,0 +1,88 @@
+@utility flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@utility flex-center-y {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+@utility custom-scrollbar {
+	&::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+		background-color: transparent;
+	}
+
+	/* Background scroll bar */
+	&::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba(0, 0, 0, 0.3);
+		border-radius: 1rem;
+	}
+
+	&::-webkit-scrollbar-thumb:hover {
+		background-color: var(--foreground-muted);
+	}
+}
+
+@utility no-scrollbar {
+	@apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
+
+@utility abs-center {
+	@apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+@utility abs-center-x {
+	@apply left-1/2 -translate-x-1/2;
+}
+
+@utility abs-center-y {
+	@apply top-1/2 -translate-y-1/2;
+}
+
+/* Dots loader */
+@utility dot-loader {
+	aspect-ratio: 1;
+	border-radius: 50%;
+	animation: l5 1s infinite linear alternate;
+}
+
+@keyframes l5 {
+	0% {
+		box-shadow:
+			20px 0 var(--foreground),
+			-20px 0 #0002;
+		background: var(--foreground);
+	}
+	33% {
+		box-shadow:
+			20px 0 var(--foreground),
+			-20px 0 #0002;
+		background: #0002;
+	}
+	66% {
+		box-shadow:
+			20px 0 #0002,
+			-20px 0 var(--foreground);
+		background: #0002;
+	}
+	100% {
+		box-shadow:
+			20px 0 #0002,
+			-20px 0 var(--foreground);
+		background: var(--foreground);
+	}
+}
+
+@utility hide-number-input-arrow {
+	@apply [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
+}

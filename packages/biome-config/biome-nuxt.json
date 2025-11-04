@@ -1,0 +1,19 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"extends": ["@repo/biome-config/biome", "ultracite/vue"],
+	"files": {
+		"ignoreUnknown": false,
+		"includes": [
+			"!**/.nuxt/**",
+			"!**/.output/**",
+			"!**/.turbo/**",
+			"!**/.playground",
+			"!**/dist/**"
+		]
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	}
+}

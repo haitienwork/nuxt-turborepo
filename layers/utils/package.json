@@ -1,0 +1,24 @@
+{
+	"name": "@repo/utils",
+	"type": "module",
+	"version": "0.0.1",
+	"main": "./nuxt.config.ts",
+	"scripts": {
+		"dev": "nuxi dev -p 3006",
+		"build": "nuxt build",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare",
+		"lint": "biome lint ./ --write",
+		"format": "biome format ./ --write",
+		"update": "pnpx npm-check-updates -ui"
+	},
+	"devDependencies": {
+		"@repo/biome-config": "workspace:*",
+		"nuxt": "^4.2.0",
+		"typescript": "^5.9.3"
+	},
+	"dependencies": {
+		"vue-sonner": "^2.0.9"
+	}
+}

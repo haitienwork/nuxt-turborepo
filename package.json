@@ -1,0 +1,27 @@
+{
+	"name": "nuxt-turborepo",
+	"private": true,
+	"scripts": {
+		"build": "turbo build",
+		"dev": "turbo dev",
+		"lint": "turbo lint",
+		"format": "turbo format",
+		"prepare": "husky",
+		"shadcn:add": "pnpm --filter @repo/ui shadcn:add-component"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.3",
+		"@repo/biome-config": "workspace:*",
+		"@repo/typescript-config": "workspace:*",
+		"husky": "^9.1.7",
+		"turbo": "^2.6.0",
+		"ultracite": "6.2.1"
+	},
+	"packageManager": "pnpm@9.15.4",
+	"lint-staged": {
+		"*.{js,ts,vue}": [
+			"pnpm run lint",
+			"pnpm run format"
+		]
+	}
+}
